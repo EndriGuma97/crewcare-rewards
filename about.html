@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CrewCare - Employee Benefits System</title>
+    <title>CrewCare - About Us</title>
     <style>
       :root {
         --primary: #c9a14d;
@@ -214,18 +214,6 @@
         margin-bottom: var(--spacing-md);
       }
 
-      .hero-rating {
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-xs);
-        margin-bottom: var(--spacing-md);
-      }
-
-      .hero-rating .stars {
-        color: var(--primary);
-        font-size: 1.5rem;
-      }
-
       .hero-image {
         flex: 1;
         max-width: 500px;
@@ -235,9 +223,9 @@
       .hero-image img {
         width: 100%;
         position: relative;
-        z-index: 5; /* Higher z-index to place image above circles */
-        max-height: 450px; /* Control maximum height */
-        object-fit: contain; /* Preserve aspect ratio */
+        z-index: 5;
+        max-height: 450px;
+        object-fit: contain;
       }
 
       .hero-circle {
@@ -245,7 +233,7 @@
         background-color: var(--primary);
         opacity: 0.2;
         border-radius: 50%;
-        z-index: 1; /* Lower z-index to place circles below image */
+        z-index: 1;
       }
 
       .hero-circle-1 {
@@ -262,8 +250,8 @@
         left: -100px;
       }
 
-      /* Features Section */
-      .features {
+      /* About Section */
+      .about {
         padding: var(--spacing-xl) 0;
         background-color: var(--light);
       }
@@ -282,30 +270,46 @@
       }
 
       .section-header p {
-        max-width: 700px;
+        max-width: 800px;
         margin: 0 auto;
         font-size: 1.1rem;
       }
 
-      .feature-grid {
+      .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+      }
+
+      .about-text {
+        background-color: white;
+        border-radius: var(--border-radius);
+        padding: var(--spacing-lg);
+        box-shadow: var(--box-shadow);
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      .about-cards {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: var(--spacing-md);
       }
 
-      .feature-card {
+      .about-card {
         background-color: white;
         border-radius: var(--border-radius);
         padding: var(--spacing-md);
         box-shadow: var(--box-shadow);
         transition: all 0.3s ease;
+        border-top: 4px solid var(--primary);
       }
 
-      .feature-card:hover {
+      .about-card:hover {
         transform: translateY(-10px);
       }
 
-      .feature-card-icon {
+      .about-card-icon {
         width: 60px;
         height: 60px;
         background-color: var(--primary);
@@ -318,44 +322,10 @@
         margin-bottom: var(--spacing-sm);
       }
 
-      .feature-card h3 {
+      .about-card h3 {
         font-size: 1.5rem;
         margin-bottom: var(--spacing-xs);
-      }
-
-      /* Benefits Section */
-      .benefits {
-        padding: var(--spacing-xl) 0;
-        background-color: var(--secondary);
-        color: var(--text-light);
-      }
-
-      .benefits .section-header h2 {
-        color: var(--text-light);
-      }
-
-      .benefits-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: var(--spacing-md);
-      }
-
-      .benefit-card {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: var(--border-radius);
-        padding: var(--spacing-md);
-        border-left: 4px solid var(--primary);
-        transition: all 0.3s ease;
-      }
-
-      .benefit-card:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-        transform: translateY(-5px);
-      }
-
-      .benefit-card h3 {
-        color: var(--primary);
-        margin-bottom: var(--spacing-xs);
+        color: var(--secondary);
       }
 
       /* Testimonials Section */
@@ -416,7 +386,7 @@
       }
 
       .cta p {
-        max-width: 700px;
+        max-width: 800px;
         margin: 0 auto var(--spacing-md);
         font-size: 1.2rem;
       }
@@ -513,99 +483,6 @@
         margin-top: var(--spacing-lg);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         font-size: 0.9rem;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 991px) {
-        h1 {
-          font-size: 2.5rem;
-        }
-
-        h2 {
-          font-size: 2rem;
-        }
-
-        .hero-content {
-          flex-direction: column;
-        }
-
-        .hero-text,
-        .hero-image {
-          max-width: 100%;
-        }
-
-        .hero-image img {
-          max-height: 350px; /* Slightly smaller on tablets */
-        }
-      }
-
-      @media (max-width: 768px) {
-        .nav-links {
-          display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          width: 100%;
-          background-color: var(--light);
-          flex-direction: column;
-          padding: var(--spacing-md);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-links.active {
-          display: flex;
-        }
-
-        .mobile-menu-btn {
-          display: block;
-        }
-
-        .hero-image img {
-          max-height: 300px; /* Even smaller on mobile */
-        }
-
-        .hero-circle-1 {
-          width: 200px;
-          height: 200px;
-          top: -50px;
-          right: -50px;
-        }
-
-        .hero-circle-2 {
-          width: 150px;
-          height: 150px;
-          bottom: -30px;
-          left: -30px;
-        }
-      }
-
-      /* Animations */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animate {
-        animation: fadeIn 0.6s ease forwards;
-        opacity: 0;
-      }
-
-      .delay-1 {
-        animation-delay: 0.2s;
-      }
-
-      .delay-2 {
-        animation-delay: 0.4s;
-      }
-
-      .delay-3 {
-        animation-delay: 0.6s;
       }
 
       /* Wave Shape Divider */
@@ -783,15 +660,82 @@
         }
       }
 
-      /* Responsive adjustments for the popup */
-      @media (max-width: 768px) {
-        .popup-content {
-          width: 95%;
-          padding: 15px;
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate {
+        animation: fadeIn 0.6s ease forwards;
+        opacity: 0;
+      }
+
+      .delay-1 {
+        animation-delay: 0.2s;
+      }
+
+      .delay-2 {
+        animation-delay: 0.4s;
+      }
+
+      .delay-3 {
+        animation-delay: 0.6s;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 991px) {
+        h1 {
+          font-size: 2.5rem;
         }
 
-        .iframe-container iframe {
-          height: 450px;
+        h2 {
+          font-size: 2rem;
+        }
+
+        .hero-content {
+          flex-direction: column;
+        }
+
+        .hero-text,
+        .hero-image {
+          max-width: 100%;
+        }
+
+        .hero-image img {
+          max-height: 350px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: var(--light);
+          flex-direction: column;
+          padding: var(--spacing-md);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .hero-image img {
+          max-height: 300px;
         }
       }
     </style>
@@ -817,8 +761,8 @@
             />
           </a>
           <div class="nav-links" id="navLinks">
-            <a href="#">HOME</a>
-            <a href="#">ABOUT</a>
+            <a href="/">HOME</a>
+            <a href="/about">ABOUT</a>
             <a href="#">OUR PLATFORM</a>
             <a href="/contact">CONTACT</a>
             <a href="#" id="bookConsultationBtn" class="btn-nav"
@@ -842,25 +786,15 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text animate">
-            <h1><span>EVP Boost</span>, Zero Boost<br />in Costs</h1>
-            <div class="hero-rating">
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <span>4.5 out of 5 stars</span>
-            </div>
+            <h1>About <span>CrewCare</span></h1>
             <p>
-              We surveyed MCD owners across the country, and the results speak
-              for themselves
+              Our mission is to help businesses attract and retain the best
+              talent with comprehensive employee benefits that cost employers
+              nothing.
             </p>
-            <a href="/contact" class="btn btn-primary">GET STARTED TODAY</a>
           </div>
           <div class="hero-image animate delay-1">
-            <img src="/hero-img.png" alt="Employee Benefits" />
+            <img src="/about.png" alt="CrewCare Team" />
             <div class="hero-circle hero-circle-1"></div>
             <div class="hero-circle hero-circle-2"></div>
           </div>
@@ -872,47 +806,59 @@
       <div class="wave"></div>
     </div>
 
-    <!-- Features Section -->
-    <section class="features">
+    <!-- About Section -->
+    <section class="about">
       <div class="container">
         <div class="section-header animate">
-          <h2>Owner Pays <span>Nothing</span></h2>
+          <h2>Who We <span>Are</span></h2>
           <p>
-            Enhance employee dedication with CrewCare. Their choice, their
-            benefits, no cost to you.
+            Dedicated to creating value for businesses and their employees
+            through innovative benefits solutions
           </p>
         </div>
-        <div class="feature-grid">
-          <div class="feature-card animate delay-1">
-            <div class="feature-card-icon">
-              <i class="fas fa-dollar-sign"></i>
-            </div>
-            <h3>Zero Cost</h3>
+        <div class="about-content">
+          <div class="about-text animate delay-1">
             <p>
-              The crew pay 100% of the cost of the service (as a payroll
-              deduction). Owner is NOT locked into a contract. Cancel anytime.
+              CrewCare has an executive team with extensive experience in
+              helping businesses and organizations develop or expand employee
+              retention programs. We have all the resources necessary to deploy
+              an EVP program for any sized organization quickly. Our
+              five-ingredient platform creatively bundles solid employee
+              benefits into a single access point.
             </p>
           </div>
-          <div class="feature-card animate delay-2">
-            <div class="feature-card-icon">
-              <i class="fas fa-users"></i>
+          <div class="about-cards">
+            <div class="about-card animate delay-1">
+              <div class="about-card-icon">
+                <i class="fas fa-users-cog"></i>
+              </div>
+              <h3>Experienced Team</h3>
+              <p>
+                Our executive team brings decades of expertise in employee
+                retention and benefits management to help your business thrive.
+              </p>
             </div>
-            <h3>Covers Entire Family</h3>
-            <p>
-              Up to 8 people per employee with no copays, no deductibles, and no
-              fees. Crew are NOT locked into a contract.
-            </p>
-          </div>
-          <div class="feature-card animate delay-3">
-            <div class="feature-card-icon">
-              <i class="fas fa-heart"></i>
+            <div class="about-card animate delay-2">
+              <div class="about-card-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3>Quick Deployment</h3>
+              <p>
+                With our streamlined processes, we can implement our EVP program
+                for organizations of any size rapidly and efficiently.
+              </p>
             </div>
-            <h3>Comprehensive EVP</h3>
-            <p>
-              CrewCare is a multi-faceted benefits platform and comprehensive
-              Employee Value Proposition (EVP) strategy to maximize your
-              organization's ability to acquire and retain crew.
-            </p>
+            <div class="about-card animate delay-3">
+              <div class="about-card-icon">
+                <i class="fas fa-hand-holding-heart"></i>
+              </div>
+              <h3>Five-Ingredient Platform</h3>
+              <p>
+                Our unique approach bundles essential employee benefits into a
+                single, easy-to-access platform for maximum convenience and
+                value.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -922,63 +868,7 @@
       <div class="wave"></div>
     </div>
 
-    <!-- Benefits Section -->
-    <section class="benefits">
-      <div class="container">
-        <div class="section-header animate">
-          <h2>Why McDonald's Owners <span>Choose CrewCare</span></h2>
-          <p>
-            Because we SUPER SIZE your EVP! Compared to any other platform or
-            employee benefits solution, CrewCare delivers far more.
-          </p>
-        </div>
-        <div class="benefits-grid">
-          <div class="benefit-card animate delay-1">
-            <h3>Telemedicine</h3>
-            <p>
-              A nationwide network of U.S. board certified doctors, 24 hours a
-              day, 365 days a year, in up to 60 languages.
-            </p>
-          </div>
-          <div class="benefit-card animate delay-2">
-            <h3>Mental Healthcare</h3>
-            <p>
-              Private appointments with counselors on issues such as depression,
-              relationship issues, substance abuse, financial stress and more.
-            </p>
-          </div>
-          <div class="benefit-card animate delay-3">
-            <h3>Healthcare Savings</h3>
-            <p>
-              Significant discounts on vision, dental, chiropractic, diabetic
-              supplies, imaging and laboratory services.
-            </p>
-          </div>
-          <div class="benefit-card animate delay-1">
-            <h3>Local Coupons</h3>
-            <p>
-              Mobile coupon app offers major discounts at local stores,
-              restaurants, movies, big box stores, and more in over 1,000,000
-              locations nationwide.
-            </p>
-          </div>
-          <div class="benefit-card animate delay-2">
-            <h3>Credit-Pal</h3>
-            <p>
-              Platform designed to help employees understand their current
-              credit situation and then take steps to improve their scores
-              through proven strategies.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="wave-divider primary">
-      <div class="wave"></div>
-    </div>
-
-    <!-- Testimonials Section (Replaced with Videos) -->
+    <!-- Testimonials Section (Videos) -->
     <section class="testimonials">
       <div class="container">
         <div class="section-header animate">
@@ -1029,57 +919,20 @@
       </div>
     </section>
 
-    <!-- Survey Results Section -->
-    <section class="features">
-      <div class="container">
-        <div class="section-header animate">
-          <h2>Employee <span>Satisfaction</span></h2>
-          <p>
-            We surveyed over 2000 MCD employees across the country and here's
-            what they had to say:
-          </p>
-        </div>
-        <div class="feature-grid">
-          <div class="feature-card animate delay-1">
-            <div class="feature-card-icon">
-              <i class="fas fa-smile"></i>
-            </div>
-            <h3>99.7%</h3>
-            <p>Are happy their employer is providing CrewCare benefits.</p>
-          </div>
-          <div class="feature-card animate delay-2">
-            <div class="feature-card-icon">
-              <i class="fas fa-mobile-alt"></i>
-            </div>
-            <h3>94%</h3>
-            <p>Would like to save money using the savings app.</p>
-          </div>
-          <div class="feature-card animate delay-3">
-            <div class="feature-card-icon">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <h3>73%</h3>
-            <p>
-              Would like to improve their credit through the Credit-Pal
-              platform.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- CTA Section -->
     <section class="cta">
       <div class="container">
         <h2 class="animate">
-          Want a Proven Way to Attract and Retain Employees at No Cost?
+          WANT A PROVEN WAY TO ATTRACT AND RETAIN EMPLOYEES WITH NO COST?
         </h2>
         <p class="animate delay-1">
-          CrewCare is a powerful EVP program that provides real benefits to keep
-          employees motivated, engaged, and committed—driving retention and
-          productivity for your organization.
+          CrewCare is an excellent EVP program that delivers real benefits to
+          keep employees motivated and focused, so they elect to want to stay
+          and remain fully productive for the organization's benefit. Our
+          platform helps reduce turnover and its related costs without any cost
+          to you!
         </p>
-        <a href="/contact" class="btn animate delay-2">LET'S TALK NOW</a>
+        <a href="/contact" class="btn animate delay-2">LET'S TALK NOW ➤</a>
       </div>
     </section>
 
@@ -1101,8 +954,8 @@
           <div class="footer-links">
             <h4>Quick Links</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
               <li><a href="#">Our Platform</a></li>
               <li><a href="/contact">Contact</a></li>
               <li>
@@ -1182,9 +1035,19 @@
         "bookConsultationBtn"
       );
       const closePopupBtn = document.querySelector(".close-popup");
+      const footerConsultationBtn = document.getElementById(
+        "footerConsultationBtn"
+      );
 
       // Open popup when button is clicked
       bookConsultationBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        consultationPopup.style.display = "flex";
+        document.body.style.overflow = "hidden"; // Prevent scrolling when popup is open
+      });
+
+      // Open popup when footer button is clicked
+      footerConsultationBtn.addEventListener("click", (e) => {
         e.preventDefault();
         consultationPopup.style.display = "flex";
         document.body.style.overflow = "hidden"; // Prevent scrolling when popup is open
@@ -1202,17 +1065,6 @@
           consultationPopup.style.display = "none";
           document.body.style.overflow = "auto"; // Re-enable scrolling
         }
-      });
-      // Add this code to your JavaScript section
-      const footerConsultationBtn = document.getElementById(
-        "footerConsultationBtn"
-      );
-
-      // Open popup when footer button is clicked
-      footerConsultationBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        consultationPopup.style.display = "flex";
-        document.body.style.overflow = "hidden"; // Prevent scrolling when popup is open
       });
     </script>
   </body>
