@@ -4,6 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CrewCare - About Us</title>
+    <meta
+      name="description"
+      content="Learn more about CrewCare and our mission to provide zero-cost employee benefits, helping McDonald's owners enhance their Employee Value Proposition (EVP) and improve crew retention. Discover our experienced team and innovative platform."
+    />
+    <meta
+      name="keywords"
+      content="about crewcare, crewcare mission, employee benefits company, EVP solutions, employee retention strategies, zero-cost benefits, McDonald's employee programs"
+    />
+    <link rel="canonical" href="https://crewcarerewards.com/about.html" />
+    <meta
+      property="og:title"
+      content="About CrewCare - Our Mission and Values"
+    />
+    <meta
+      property="og:description"
+      content="Discover CrewCare's mission to revolutionize employee benefits at zero cost to employers, focusing on enhancing EVP and crew retention for businesses like McDonald's franchises."
+    />
+    <meta property="og:image" content="https://crewcarerewards.com/about.png" />
+    <meta property="og:url" content="https://crewcarerewards.com/about.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CrewCare" />
+    <link rel="icon" href="/favicon32X32.jpg" type="image/jpeg" sizes="32x32" />
+    <link
+      rel="icon"
+      href="/favicon-192x192.jpg"
+      type="image/jpeg"
+      sizes="192x192"
+    />
+    <link
+      rel="icon"
+      href="/favicon-270x270.jpg"
+      type="image/jpeg"
+      sizes="270x270"
+    />
+    <link rel="apple-touch-icon" href="/apple.jpg" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <meta name="theme-color" content="#c9a14d" />
     <style>
       :root {
         --primary: #c9a14d;
@@ -250,13 +288,14 @@
         left: -100px;
       }
 
-      /* About Section */
+      /* About Section specific styles (from your provided about.html body) */
       .about {
         padding: var(--spacing-xl) 0;
         background-color: var(--light);
       }
 
       .section-header {
+        /* Assuming this is a general class you might reuse */
         text-align: center;
         margin-bottom: var(--spacing-lg);
       }
@@ -270,7 +309,7 @@
       }
 
       .section-header p {
-        max-width: 800px;
+        max-width: 800px; /* Adjusted for about section if needed */
         margin: 0 auto;
         font-size: 1.1rem;
       }
@@ -327,8 +366,9 @@
         margin-bottom: var(--spacing-xs);
         color: var(--secondary);
       }
+      /* End of About Section specific styles */
 
-      /* Testimonials Section */
+      /* Testimonials Section (shared styles for videos) */
       .testimonials {
         padding: var(--spacing-xl) 0;
         background-color: var(--light);
@@ -364,7 +404,7 @@
 
       .video-item iframe {
         width: 100%;
-        height: 250px;
+        height: 250px; /* Default height from index, can be overridden */
         border-radius: var(--border-radius);
       }
 
@@ -386,7 +426,7 @@
       }
 
       .cta p {
-        max-width: 800px;
+        max-width: 800px; /* Consistent with about section */
         margin: 0 auto var(--spacing-md);
         font-size: 1.2rem;
       }
@@ -483,6 +523,101 @@
         margin-top: var(--spacing-lg);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         font-size: 0.9rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 991px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        .hero-content {
+          flex-direction: column;
+        }
+
+        .hero-text,
+        .hero-image {
+          max-width: 100%;
+        }
+
+        .hero-image img {
+          max-height: 350px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: var(--light);
+          flex-direction: column;
+          padding: var(--spacing-md);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .hero-image img {
+          max-height: 300px;
+        }
+
+        .hero-circle-1 {
+          /* Copied from index.html for consistency */
+          width: 200px;
+          height: 200px;
+          top: -50px;
+          right: -50px;
+        }
+
+        .hero-circle-2 {
+          /* Copied from index.html for consistency */
+          width: 150px;
+          height: 150px;
+          bottom: -30px;
+          left: -30px;
+        }
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate {
+        animation: fadeIn 0.6s ease forwards;
+        opacity: 0;
+      }
+
+      .delay-1 {
+        animation-delay: 0.2s;
+      }
+
+      .delay-2 {
+        animation-delay: 0.4s;
+      }
+
+      .delay-3 {
+        animation-delay: 0.6s;
       }
 
       /* Wave Shape Divider */
@@ -660,82 +795,15 @@
         }
       }
 
-      /* Animations */
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animate {
-        animation: fadeIn 0.6s ease forwards;
-        opacity: 0;
-      }
-
-      .delay-1 {
-        animation-delay: 0.2s;
-      }
-
-      .delay-2 {
-        animation-delay: 0.4s;
-      }
-
-      .delay-3 {
-        animation-delay: 0.6s;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 991px) {
-        h1 {
-          font-size: 2.5rem;
-        }
-
-        h2 {
-          font-size: 2rem;
-        }
-
-        .hero-content {
-          flex-direction: column;
-        }
-
-        .hero-text,
-        .hero-image {
-          max-width: 100%;
-        }
-
-        .hero-image img {
-          max-height: 350px;
-        }
-      }
-
+      /* Responsive adjustments for the popup */
       @media (max-width: 768px) {
-        .nav-links {
-          display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          width: 100%;
-          background-color: var(--light);
-          flex-direction: column;
-          padding: var(--spacing-md);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        .popup-content {
+          width: 95%;
+          padding: 15px;
         }
 
-        .nav-links.active {
-          display: flex;
-        }
-
-        .mobile-menu-btn {
-          display: block;
-        }
-
-        .hero-image img {
-          max-height: 300px;
+        .iframe-container iframe {
+          height: 450px;
         }
       }
     </style>
@@ -747,13 +815,48 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CrewCare",
+        "url": "https://crewcarerewards.com/",
+        "logo": "https://crewcarerewards.com/logo.png",
+        "description": "CrewCare provides a zero-cost employee benefits system to help businesses, particularly McDonald's franchises, enhance their Employee Value Proposition and improve crew retention.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10161 Park Run Drive, Suite 150",
+          "addressLocality": "Las Vegas",
+          "addressRegion": "NV",
+          "postalCode": "89145",
+          "addressCountry": "US"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-702-842-0294",
+          "contactType": "Customer Service"
+        },
+        "potentialAction": {
+          "@type": "ReserveAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://admin-crewcarerewards.zohobookings.com/portal-embed#/crewcarerewards",
+            "actionPlatform": [
+              "https://schema.org/DesktopWebPlatform",
+              "https://schema.org/IOSPlatform",
+              "https://schema.org/AndroidPlatform"
+            ]
+          },
+          "name": "Book Consultation"
+        }
+      }
+    </script>
   </head>
   <body>
-    <!-- Header -->
     <header>
       <div class="container">
         <nav class="navbar">
-          <a href="#" class="logo">
+          <a href="/" class="logo">
             <img src="/logo.png" alt="CrewCare Logo" class="logo" />
           </a>
           <div class="nav-links" id="navLinks">
@@ -772,7 +875,6 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
       <div class="floating-shapes">
         <div class="floating-shape"></div>
@@ -802,7 +904,6 @@
       <div class="wave"></div>
     </div>
 
-    <!-- About Section -->
     <section class="about">
       <div class="container">
         <div class="section-header animate">
@@ -864,7 +965,6 @@
       <div class="wave"></div>
     </div>
 
-    <!-- Testimonials Section (Videos) -->
     <section class="testimonials">
       <div class="container">
         <div class="section-header animate">
@@ -904,7 +1004,7 @@
             <iframe
               height="200"
               src="https://www.youtube.com/embed/G1P8fXYPcgw"
-              title="CrewCare Discount Savings Website &amp; App"
+              title="CrewCare Discount Savings Website & App"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
@@ -915,7 +1015,6 @@
       </div>
     </section>
 
-    <!-- CTA Section -->
     <section class="cta">
       <div class="container">
         <h2 class="animate">
@@ -928,11 +1027,10 @@
           platform helps reduce turnover and its related costs without any cost
           to you!
         </p>
-        <a href="/contact" class="btn animate delay-2">LET'S TALK NOW ➤</a>
+        <a href="/contact.html" class="btn animate delay-2">LET'S TALK NOW ➤</a>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer>
       <div class="container">
         <div class="footer-content">
@@ -969,15 +1067,14 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 CrewCare Rewards. All Rights Reserved.</p>
+          <p>© 2025 CrewCare Rewards. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
 
-    <!-- Consultation Popup -->
     <div id="consultationPopup" class="popup">
       <div class="popup-content">
-        <span class="close-popup">&times;</span>
+        <span class="close-popup">×</span>
         <div class="iframe-container">
           <iframe
             width="100%"
